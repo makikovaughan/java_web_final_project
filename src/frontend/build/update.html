@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Review</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-info text-dark bg-opacity-25">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Travel Reviews</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./update.html"
+                  >Update</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./delete.html">Delete</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container justify-content-center" id="jumbo-container">
+      <div class="jumbotron pb-4 rounded-3">
+        <h1>My Travel Reviews</h1>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-auto" id="travel">
+              <!-- It will be displayed dynamically here -->
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <header>
+          <h1>Update the review</h1>
+        </header>
+        <div id="input-container">
+          <form id="my-form">
+            <input
+              type="number"
+              id="idNumber"
+              name="idNumber"
+              min="1"
+              placeholder="ID number"
+              pattern="[0-9]+"
+              required
+            />
+            <br /><br />
+            <input
+              type="text"
+              id="c-name"
+              name="c-name"
+              minlength="1"
+              maxlength="15"
+              placeholder="Country Name"
+              pattern="[A-Za-z]+"
+              required
+            />
+            <br /><br />
+            <input
+              id="review-score"
+              name="review-score"
+              type="number"
+              min="0"
+              max="5"
+              placeholder="Review Score(Between 0 and 5)"
+              pattern="[0-5]+"
+              required
+            />
+            <br /><br />
+            <textarea
+              id="comment"
+              name="comment"
+              placeholder="Comment here."
+              rows="5"
+              cols="30"
+              required
+            ></textarea>
+            <br /><br />
+            <button id="button">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link the js file -->
+    <script src="./js/index.js"></script>
+    <script src="./js/update.js"></script>
+  </body>
+</html>
