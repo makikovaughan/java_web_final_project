@@ -10,11 +10,11 @@ public class Travel {
     //Instance
     @Id
     @GeneratedValue
-    Integer id;
+    private Integer id;
 
-    String country;
-    Integer review;
-    String comment;
+    private String country;
+    private Integer review;
+    private String comment;
 
     //Constructor
     public Travel() {
